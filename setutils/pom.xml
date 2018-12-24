@@ -1,0 +1,58 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.org.lzq</groupId>
+  <artifactId>setutils</artifactId>
+  <version>0.0.1</version>
+  <name>setutils</name>
+  <description>This is a project about set</description>
+  
+  <dependencies>
+  	<dependency>
+  		 <groupId>commons-beanutils</groupId>
+  		 <artifactId>commons-beanutils</artifactId>
+  		 <version>1.9.3</version>
+  	</dependency>
+  	<dependency>
+  		 <groupId>org.apache.commons</groupId>
+  		 <artifactId>commons-collections4</artifactId>
+         <version>4.0</version>
+  	</dependency>
+  </dependencies>
+  
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+  <profiles>
+  	<profile>
+  		<id>dev</id>
+  		<properties>
+			<JAVA_HOME>C:\Program Files\Java\jdk1.8.0_144</JAVA_HOME>
+  		</properties>
+  		<activation>
+            <activeByDefault>true</activeByDefault><!-- 设置默认激活这个配置 -->
+        </activation>
+  	</profile>
+  </profiles>
+  
+  <build>  
+      <plugins>  
+        <plugin>  
+            <groupId>org.apache.maven.plugins</groupId>  
+            <artifactId>maven-compiler-plugin</artifactId>  
+            <version>3.8.0</version>  
+            <configuration>  
+                <source>1.8</source><!-- 源代码使用的JDK版本 -->   
+                <target>1.8</target><!-- 需要生成的目标class文件的编译版本 -->
+                <encoding>UTF-8</encoding><!-- 字符集编码 -->
+                <skipTests>true</skipTests><!-- 跳过测试 -->
+                <verbose>true</verbose>
+        		<showWarnings>true</showWarnings>
+        		<executable>${JAVA_HOME}/bin/javac</executable>
+            	<meminitial>128m</meminitial><!-- 编译器使用的初始内存 -->
+            	<maxmem>512m</maxmem><!-- 编译器使用的最大内存 -->
+            </configuration>  
+        </plugin>  
+      </plugins>  
+    </build>  
+</project>
