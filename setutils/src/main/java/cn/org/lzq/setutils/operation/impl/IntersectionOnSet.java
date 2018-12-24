@@ -1,4 +1,4 @@
-package cn.org.lzq.operation.impl;
+package cn.org.lzq.setutils.operation.impl;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -7,7 +7,7 @@ import java.util.Set;
 
 import org.apache.commons.collections4.ListUtils;
 
-import cn.org.lzq.operation.Intersection;
+import cn.org.lzq.setutils.operation.Intersection;
 
 public class IntersectionOnSet implements Intersection {
 

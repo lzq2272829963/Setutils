@@ -17,6 +17,11 @@
   		 <artifactId>commons-collections4</artifactId>
          <version>4.0</version>
   	</dependency>
+  	<dependency>
+  		<groupId>cn.org.lzq</groupId>
+  		<artifactId>sort</artifactId>
+  		<version>0.0.1</version>
+  	</dependency>
   </dependencies>
   
   <properties>
